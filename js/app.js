@@ -19,6 +19,14 @@ function gestionEvenement3() {
   b.style.color = 'red';
 }
 
+function gestionEvenement4(e) {
+  b.style.left = e.pageX + 'px';
+  b.style.top = e.pageY + 'px';
+  b.innerHTML = 'mouse move';
+  b.style.transform = 'scale(0.75) translate(-50%, -50%)';
+  b.style.border = '10px solid teal';
+}
+
 // deplacement horizontal(droite-gauche) de notre shape, apres avoir fait un click
 
 let topPos = 0;
@@ -54,3 +62,5 @@ b.addEventListener('ondblclick', gestionEvenement1);
 b.addEventListener('mouseover', gestionEvenement2);
 
 b.addEventListener('mouseleave', gestionEvenement3);
+
+b.addEventListener('mousemove', gestionEvenement4);
